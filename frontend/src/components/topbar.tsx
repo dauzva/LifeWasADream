@@ -1,10 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import ChevronDownIcon from './icons/chevronDownIcon';
 import LogoutIcon from './icons/logoutIcon';
 import SearchIcon from './icons/searchIcon';
 
 export default function Topbar() {
+  const navigate = useNavigate();
   const handleLogout = () => {
-    window.location.href = '/login';
+    navigate('/login');
     console.log('Logging out...');
   };
 
